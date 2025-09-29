@@ -1,7 +1,7 @@
 # DSA4262-Term-Project
 # Prediction of m6A RNA Modifications from Direct RNA-Seq Data (A contemporary template)
 
-##Project Overview
+## Project Overview
 This project is part of **DSA4262 – Data Science in Genomics (AY2025)**.  
 Our goal is to develop a machine learning method to **identify m6A RNA modifications** from direct RNA sequencing data and apply the model to SG-NEx cancer cell lines.  
 
