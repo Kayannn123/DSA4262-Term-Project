@@ -19,7 +19,6 @@ delta_c_minus_m1_mean
 delta_c_minus_m1_sd
 delta_c_minus_p1_dt
 delta_c_minus_p1_sd
-is_drach
 log1p_n_reads
 m1_dt_iqr
 m1_dt_max
