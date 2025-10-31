@@ -1,2 +1,3 @@
-data/*.json.gz
-data/*.labelled
+data
+.venv
+results
