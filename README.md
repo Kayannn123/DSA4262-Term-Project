@@ -1,5 +1,5 @@
 # DSA4262-Term-Project
-# Prediction of m6A RNA Modifications from Direct RNA-Seq Data (A contemporary template)
+# Prediction of m6A RNA Modifications from Direct RNA-Seq Data
 
 ## Project Overview
 This project is part of **DSA4262 – Data Science in Genomics (AY2025)**.  
@@ -9,6 +9,26 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 - **Task 2:** Apply the best-performing model to five SG-NEx cancer cell lines (A549, Hct116, HepG2, MCF7, K562).  
 
 ---
+
+## Repo Structure
+m6A-prediction/
+├── README.md
+├── environment.yml  (or requirements.txt)
+├── Dockerfile
+├── train.py
+├── predict.py
+├── src/
+│   ├── model.py
+│   ├── preprocess.py
+│   ├── utils.py
+│   └── ...
+├── test_data/
+│   ├── data.json
+│   ├── data.info
+│   └── expected_output.csv
+└── docs/
+    ├── INSTALL.md
+    └── RUN.md
 
 ## Installation & Environment Setup
 We recommend using **conda** or **virtualenv**.  
