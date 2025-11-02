@@ -74,5 +74,27 @@
     "ctx_26",
     "ctx_27"
   ],
-  "threshold": 0.5
+  "threshold": 0.5,
+  "model_type": "xgb_ensemble_5fold",
+  "n_folds": 5,
+  "fold_models": [
+    "xgb_fold1.pkl",
+    "xgb_fold2.pkl",
+    "xgb_fold3.pkl",
+    "xgb_fold4.pkl",
+    "xgb_fold5.pkl"
+  ],
+  "best_params": {
+    "max_depth": 7,
+    "learning_rate": 0.04302079441911812,
+    "n_estimators": 663,
+    "subsample": 0.7368038358606985,
+    "colsample_bytree": 0.8536161518163243,
+    "scale_pos_weight": 12,
+    "min_child_weight": 4,
+    "gamma": 0.062000706600374725,
+    "reg_alpha": 1.2122729646581127,
+    "reg_lambda": 7.036593954451487
+  },
+  "created_at": "2025-11-02T15:01:50.372901Z"
 }
