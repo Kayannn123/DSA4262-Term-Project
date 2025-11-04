@@ -1,4 +1,3 @@
-# DSA4262-Term-Project
 # Prediction of m6A RNA Modifications from Direct RNA-Seq Data
 
 ## Project Overview
