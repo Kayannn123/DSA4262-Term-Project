@@ -32,3 +32,73 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 `docker build -f dsa4262-model_predict.Dockerfile -t dsa4262-train`
 
 `docker run --rm dsa4262-predict`
+
+---
+## Repo Structure
+```
+DSA4262-TermProject/
+│
+├── data_task1/                            # Raw datasets, metadata, and evaluation samples
+│   ├── data.info.labelled.csv
+│   ├── dataset0.json
+│   ├── dataset1.json
+│   ├── dataset2.json
+│   ├── dataset3.json
+│   │
+│   ├── evaluate/                          # Test data for evaluation (used in predict.py)
+│   │   └── test.csv
+│   │
+├── eda_feature_dists/                 # Feature distribution plots and statistics
+│       ├── c_dt_mean_hist.png
+│       ├── c_mean_mean_hist.png
+│       ├── c_sd_mean_hist.png
+│       ├── m1_dt_mean_hist.png
+│       ├── m1_mean_mean_hist.png
+│       ├── m1_sd_mean_hist.png
+│       ├── p1_dt_mean_hist.png
+│       ├── p1_mean_mean_hist.png
+│       ├── p1_sd_mean_hist.png
+│       └── feature_distribution_summary.csv
+│
+├── models/                                # Trained models and metadata
+│   ├── best_params.json                   # The best parameter combination we have found
+│   ├── metadata.json
+│   │
+│   └── final/                             # Cross-validation fold models
+│       ├── xgb_fold1.pkl
+│       ├── xgb_fold2.pkl
+│       ├── xgb_fold3.pkl
+│       ├── xgb_fold4.pkl
+│       └── xgb_fold5.pkl
+│
+├── predictions/                           # Model predictions for test datasets
+│   ├── dataset1_predictions.csv
+│   ├── dataset2_predictions.csv
+│   ├── dataset3_predictions.csv
+│   └── pred_dataset0.csv
+│
+├── results/                               # Evaluation results on SGNex datasets
+│   ├── SGNex_A549_directRNA_*.csv
+│   ├── SGNex_Hct116_directRNA_*.csv
+│   ├── SGNex_HepG2_directRNA_*.csv
+│   ├── SGNex_K562_directRNA_*.csv
+│   └── SGNex_MCF7_directRNA_*.csv
+│
+├── src/                                   # Core source code
+│   ├── preprocess.py                      # Feature extraction
+│   ├── train.py                           # Model training with XGBoost & Group K-Fold CV
+│   └── predict.py                         # Ensemble inference and evaluation
+│
+├── environment.txt                        # Python dependencies
+├── .gitignore                             # Git ignore file
+│
+├── dsa4262-model_train.Dockerfile          # Dockerfile for model training
+├── dsa4262-model_predict.Dockerfile        # Dockerfile for model prediction
+│
+├── README.md                              # Project documentation
+│
+├── task1_baseline.ipynb                   # Baseline exploration notebook
+├── task1.ipynb                            # Task 1 training notebook
+└── task2.ipynb                            # Task 2 analysis notebook
+
+```
