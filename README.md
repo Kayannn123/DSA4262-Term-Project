@@ -10,7 +10,13 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 
 ---
 ## Environment Installation
-conda create -n dsa4262 python=3.10
-conda activate dsa4262
+`conda create -n dsa4262 python=3.10`
 
-pip install -r environment.txt
+`conda activate dsa4262`
+
+`pip install -r environment.txt`
+---
+## How to run the code
+### Option 1: Run in Python
+- **training and evaluation**: `python src/train.py`
+- **prediction using sample test data**: `python src/predict.py`
