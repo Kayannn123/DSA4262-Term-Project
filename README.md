@@ -9,38 +9,8 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 - **Task 2:** Apply the best-performing model to five SG-NEx cancer cell lines (A549, Hct116, HepG2, MCF7, K562).  
 
 ---
+## Environment Installation
+conda create -n dsa4262 python=3.10
+conda activate dsa4262
 
-## Repo Structure
-m6A-prediction/
-├── README.md
-├── environment.yml  (or requirements.txt)
-├── Dockerfile
-├── train.py
-├── predict.py
-├── src/
-│   ├── model.py
-│   ├── preprocess.py
-│   ├── utils.py
-│   └── ...
-├── test_data/
-│   ├── data.json
-│   ├── data.info
-│   └── expected_output.csv
-└── docs/
-    ├── INSTALL.md
-    └── RUN.md
-
-## Installation & Environment Setup
-We recommend using **conda** or **virtualenv**.  
-
-```bash
-# clone repository
-git clone https://github.com/your-team-repo/m6A-modification.git
-cd m6A-modification
-
-# create environment
-conda create -n m6a python=3.9 -y
-conda activate m6a
-
-# install dependencies
-pip install -r requirements.txt
+pip install -r environment.txt
