@@ -96,6 +96,7 @@ DSA4262-TermProject/
 │       ├── p1_dt_mean_hist.png
 │       ├── p1_mean_mean_hist.png
 │       ├── p1_sd_mean_hist.png
+│       ├── EDA.ipynb                     # Exploratory Data Analysis File
 │       └── feature_distribution_summary.csv
 │
 ├── models/                                # Trained models and metadata
