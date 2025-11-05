@@ -9,7 +9,7 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 
 ---
 ## Environment Installation
-`conda create -n dsa4262 python=3.10`
+`conda create -n dsa4262`
 
 `conda activate dsa4262`
 
@@ -23,12 +23,12 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 ### Option 2: Run via Docker
 - **training and evaluation**: 
 
-`docker build -f dsa4262-model_train.Dockerfile -t dsa4262-train`
+`docker build -f dsa4262-model_train.Dockerfile -t dsa4262-train .`
 
 `docker run --rm dsa4262-train`
 - **prediction using sample test data**: 
 
-`docker build -f dsa4262-model_predict.Dockerfile -t dsa4262-train`
+`docker build -f dsa4262-model_predict.Dockerfile -t dsa4262-predict .`
 
 `docker run --rm dsa4262-predict`
 
