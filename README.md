@@ -62,7 +62,7 @@ ENSG00000004059,ENST00000000233,316,0
 ```
 2. Data Preprocessing
 
-To preprocess data, we designed a two-stage preprocessing pipeline consisting of 45 aggregated signal-based features, and 28 sequence-context features.
+To preprocess data, we designed a two-stage preprocessing pipeline consisting of 45 aggregated signal-based features, and 28 sequence-context features. 45 columns are mean, std, med, max, min of the 9 features. 28 sequence-context features are the one hot encoder for 7-mer sequence, which has 4 bases.
 
 The detailed function can be found in `src/preprocess.py`
 
