@@ -13,4 +13,5 @@ COPY models/final /models/final
 RUN mkdir -p /data_task1/evaluate
 COPY data_task1/evaluate/test.csv /data_task1/evaluate/test.csv
 
+RUN mkdir -p /app/predictions
 CMD ["python", "predict.py"]
