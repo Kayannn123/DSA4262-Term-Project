@@ -66,7 +66,8 @@ The detailed function can be found in `src/preprocess.py`
 
 We implement an ensemble XGBoost model to balance predictive optimization with controlled variance, thereby mitigating the risk of over fitting.
 
-The train and evaluate script can be found in `src/train.py`
+The train and evaluate script can be found in `src/train.py` The evaluation metric would AUPRC and AUROC
+
 
 To allow simple prediction, we provides a small test data in the folder `data_task1/evaluate`
 ---
@@ -138,3 +139,6 @@ DSA4262-TermProject/
 └── task2.ipynb                            # Task 2 analysis notebook
 
 ```
+---
+## Acknowledgement
+- Data Description: handout_project2_RNAModifications
