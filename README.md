@@ -33,6 +33,43 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 `docker run --rm dsa4262-predict`
 
 ---
+## Task Description
+1. Data Description
+
+The raw dataset `dataset0.json` in the `data_task1` folder contains Nanopore Direct RNA-Seq signal features aligned to reference transcript sequences.
+Each line corresponds to one transcript position and stores signal-derived features from all sequencing reads covering that position.
+
+The labeled dataset `data.info.labelled.csv` in the same folder provides a 0,1 label for the corresponding site.
+
+**Structure Overview**
+
+Each line is a nested JSON object:
+```
+{"ENST00000000233":{"244":{"AAGACCA":[[0.00299,2.06,125.0,0.0177,10.4,122.0,0.0093,10.9,84.1],[0.00631,2.53,125.0,0.00844,4.67,126.0,0.0103,6.3,80.9],[0.00465,3.92,109.0,0.0136,12.0,124.0,0.00498,2.13,79.6],[0.00398,2.06,125.0,0.0083,5.01,130.0,0.00498,3.78,80.4],[0.00664,2.92,120.0,0.00266,3.94,129.0,0.013,7.15,82.2],[0.0103,3.83,123.0,0.00598,6.45,126.0,0.0153,1.09,74.8],[0.00398,3.75,126.0,0.00332,4.3,129.0,0.00299,1.93,81.9],[0.00498,3.93,127.0,0.00398,2.51,131.0,0.0111,3.47,79.4] … }
+```
+
+The m6a label for the training data is in the following format:
+
+```
+gene_id,transcript_id,transcript_position,label
+ENSG00000004059,ENST00000000233,244,0
+ENSG00000004059,ENST00000000233,261,0
+ENSG00000004059,ENST00000000233,316,0
+```
+2. Data Preprocessing
+
+To preprocess data, we designed a two-stage preprocessing pipeline consisting of 45 aggregated signal-based features, and 28 sequence-context features.
+
+The detailed function can be found in `src/preprocess.py`
+
+3. Model train, evaluate, predict
+
+We implement an ensemble XGBoost model to balance predictive optimization with controlled variance, thereby mitigating the risk of over fitting.
+
+The train and evaluate script can be found in `src/train.py`
+
+To allow simple prediction, we provides a small test data in the folder `data_task1/evaluate`
+---
 ## Repo Structure
 ```
 DSA4262-TermProject/
