@@ -68,12 +68,11 @@ The detailed function can be found in `src/preprocess.py`
 
 3. Model train, evaluate, predict
 
-We implement an ensemble XGBoost model to balance predictive optimization with controlled variance, thereby mitigating the risk of over fitting.
+We implement an ensemble XGBoost model to balance predictive optimization with controlled variance, thereby mitigating the risk of over fitting. The model is trained through `StratifiedGroupKFold`, with `k=5`, the 5 trained models are then save as `.pkl` in the folder `models/final/`.
 
-The train and evaluate script can be found in `src/train.py` The evaluation metric would AUPRC and AUROC
+The train and evaluate script can be found in `src/train.py` The evaluation metric would AUPRC and AUROC.
 
-
-To allow simple prediction, we provides a small test data in the folder `data_task1/evaluate`
+To allow simple prediction, we provides a small test data in the folder `data_task1/evaluate`. For prediction, the script will first load the five models, then make the prediction based on the mean of scores.
 
 ---
 ## Repo Structure
