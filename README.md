@@ -17,6 +17,7 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 
 ---
 ## How to run the code
+The dataset for json file is uploaded using `git lfs`, if you want to run the `train.py` or the `dsa4262-model_train.Dockerfile`. Please store `dataset0.json` locally into the folder `data_task1`
 ### Option 1: Run in Python
 - **training and evaluation**: `python src/train.py`
 - **prediction using sample test data**: `python src/predict.py`
@@ -31,6 +32,9 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 `docker build -f dsa4262-model_predict.Dockerfile -t dsa4262-predict .`
 
 `docker run --rm dsa4262-predict`
+### Notice about the notebook
+- If you want to run `task1.ipynb`, do notice that the only difference between directly running `python train.py` and `task1.ipynb` is the hyperparameter tuning process. Please change the file path before proceeding
+- If you want to run `task2.ipynb`, do notice that you shall download the data through `aws` beforehand
 
 ---
 ## Task Description
