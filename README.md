@@ -17,6 +17,7 @@ G4DN.4XLARGE with 225 GB NVMe SSD
 
 `conda activate dsa4262`
 
+directly run this if running on Ubuntu
 `pip install -r environment.txt`
 
 ---
