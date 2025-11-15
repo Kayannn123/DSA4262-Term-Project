@@ -8,6 +8,10 @@ Our goal is to develop a machine learning method to **identify m6A RNA modificat
 - **Task 2:** Apply the best-performing model to five SG-NEx cancer cell lines (A549, Hct116, HepG2, MCF7, K562).  
 
 ---
+
+## Machine Selection
+G4DN.4XLARGE with 225 GB NVMe SSD
+
 ## Environment Installation
 `conda create -n dsa4262`
 
